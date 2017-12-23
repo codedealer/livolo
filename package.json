@@ -1,6 +1,6 @@
 {
   "name": "livolo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Node js library for rf livolo protocol.",
   "main": "index.js",
   "dependencies": {
