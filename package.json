@@ -1,0 +1,26 @@
+{
+  "name": "livolo",
+  "version": "0.1.0",
+  "description": "Node js library for rf livolo protocol.",
+  "main": "index.js",
+  "dependencies": {
+    "rpio": "^0.9.20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedealer/livolo.git"
+  },
+  "keywords": [
+    "livolo",
+    "radio"
+  ],
+  "author": "Thomas Mello",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codedealer/livolo/issues"
+  },
+  "homepage": "https://github.com/codedealer/livolo#readme"
+}
