@@ -8,15 +8,15 @@ Key differences are:
 
 Depending on [rpio](https://github.com/jperkin/node-rpio) to support all major versions of node.
 Livolo uses physical pin numbering for gpio. Consult [rpio](https://github.com/jperkin/node-rpio) documentation for further details.
-#Installation
+## Installation
 ```
 npm install livolo
 ```
-#Options
+## Options
 debugMode - display debug info in the console
 repeats - the number of times to repeat the command over radio
 
-#Example
+## Example
 ```
 var Livolo = require('livolo');
 
@@ -31,7 +31,7 @@ Livolo.open(pin, options);
 Livolo.sendButton(6400, 120);
 ```
 
-#Signal and key codes
+## Signal and key codes
 
 sendButton function uses to arguments: remote ID and keycode. Typically, remote IDs are 16 bit unsigned values, but
 not all of them are valid.
