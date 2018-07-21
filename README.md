@@ -38,10 +38,22 @@ not all of them are valid.
 
 Tested remote IDs:
 
-- read from real remote IDs: 6400; 19303
-- "virtual" remote IDs: 10550; 8500; 7400
+- 6400; 19303; 10550; 8500; 7400
 
-Keycodes read from real remote:
+Remote ids for fullsize remotes can be derived from
+```
+1 + 3*remote_index
+```
+All the other ids should correspond to mini (4-buttons) remotes
+
+Keycodes for 4-buttons remotes:
+```
+#A: 8, #B: 16, #C: 56, #OFF: 42
+```
+
+Keycodes for fullsize remote:
 ```
 #1: 0, #2: 96, #3: 120, #4: 24, #5: 80, #6: 48, #7: 108, #8: 12, #9: 72; #10: 40, #OFF: 106
+#scene1: 90, #scene2: 114, #scene3: 10, #scene4: 18
+#dimmer+L: 92, #dimmer-L: 116, #dimmer+R: 126, #dimmer-R: 26
 ```
