@@ -13,8 +13,9 @@ Livolo uses physical pin numbering for gpio. Consult [rpio](https://github.com/j
 npm install livolo
 ```
 ## Options
-debugMode - display debug info in the console
-repeats - the number of times to repeat the command over radio
+`debugMode` - display debug info in the console
+
+`repeats` - the number of times to repeat the command over radio
 
 ## Example
 ```
@@ -31,10 +32,22 @@ Livolo.open(pin, options);
 Livolo.sendButton(6400, 120);
 ```
 
-## Signal and key codes
+## Typical workflow for starters
 
-sendButton function uses to arguments: remote ID and keycode. Typically, remote IDs are 16 bit unsigned values, but
-not all of them are valid.
+`remoteID` is the id of the virtual remote control. There are two types: small ones with 4 buttons and fullsized ones. `6400` is the id of a fullsized one. You can see the keycodes for fullsize remote in the very bottom of a readme.
+`keycode` is the id of a button on a given virtual remote control, so one `remoteID` has several valid `keycode`s, all of them are listed in the last section of the readme.
+
+The typical workflow is the following:
+1. set your switch in learning mode.
+2. send a command from rpi with chosen parameters, e.g. `remoteID: 6400 keycode: 120` which corresponds to fullsized virtual remote control and button no. 3.
+3. if the switch received the signal it should memorize your remote now. To change the state of the switch from now on you will send these args `Livolo.sendButton(6400, 120)`
+4. if you have another switch you wish to pair, pick another button on the remote, for example  `Livolo.sendButton(6400, 96)` would correspond to button no. 2 on the same remote.
+
+You can continue adding switches to the same remoteId while you have valid button codes (below the readme). If you exhaust all of those you can always switch to a new remoteId and continue from step 1 with it.
+
+The advantage of having all your switches on one `remoteId` (although you don't have to do that) is that you can send `Livolo.sendButton(6400, 106)` which corresponds to `OFF` button and turn off all the switches that were paired to that `remoteId` simultaneously.
+
+## Signal and key codes
 
 Tested remote IDs:
 
