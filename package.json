@@ -1,10 +1,10 @@
 {
   "name": "livolo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node js library for rf livolo protocol.",
   "main": "index.js",
   "dependencies": {
-    "rpio": "^0.9.20"
+    "rpio": "^2.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
